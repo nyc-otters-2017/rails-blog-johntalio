@@ -1,10 +1,16 @@
 <div class="posts-container">
+  <h2>All Blog Posts</h2>
+  
   <% @posts.each do |post| %>
     <tr>
-      <td><%= post.title %></td>
-      <td><%= post.description %></td>
-      <td><%= post.created_at %></td>
+      <td>Title: <%= post.title %></td>
+      <td>Description: <%= post.description %></td>
+      <td>Created: <%= post.created_at %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
     </tr>
-    <% end %>
+  <% end %>
+
+  <%= link_to 'New Post', posts_new_path %>
 
 </div>
