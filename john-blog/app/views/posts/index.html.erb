@@ -1,6 +1,6 @@
 <div class="posts-container">
   <h2>All Blog Posts</h2>
-  
+
   <% @posts.each do |post| %>
     <tr>
       <td>Title: <%= post.title %></td>
@@ -11,6 +11,6 @@
     </tr>
   <% end %>
 
-  <%= link_to 'New Post', posts_new_path %>
+  <%= link_to 'New Post', new_post_path %>
 
 </div>
