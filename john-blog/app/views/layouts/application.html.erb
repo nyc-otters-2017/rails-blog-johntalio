@@ -9,6 +9,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar-fixed">
+    <nav>
+      <ul class="navbar">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Create Account', new_user_path %></li>
+        <li><%= link_to 'Login', login_path %></li>
+      </ul>
+    </nav>
+    </header>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type%>"><%= message %></div>
+    <% end %>
+    <% yield %>
   </body>
 </html>
