@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   root 'posts#index'
-  resources :users
 
-  get 'posts' => 'posts#index'
-  get 'posts/new' => 'posts#new'
-  post 'posts' => 'posts#create'
-  get 'posts/:id' => 'posts#show'
+  resources :users
+  resources :posts
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
