@@ -1,0 +1,17 @@
+<h2>Create Account</h2>
+
+<%= form_for @user do |u| %>
+  <%= render 'user_errors'%>
+
+  <%= u.label :username %>
+  <%= u.text_field :username %>
+
+  <%= u.label :email %>
+  <%= u.email_field :email %>
+
+  <%= u.label :password %>
+  <%= u.password_field :password %>
+
+  <%= u.submit %>
+
+<% end %>

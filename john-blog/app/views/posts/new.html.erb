@@ -1,0 +1,14 @@
+<h2>Create New Post</h2>
+
+<%= form_for @post do |p| %>
+  <%= render 'post_errors' %>
+
+  <%= p.label :title %>
+  <%= p.text_field :title %>
+
+  <%= p.label :description %>
+  <%= p.text_area :description %>
+
+  <%= p.submit %>
+
+<% end %>
